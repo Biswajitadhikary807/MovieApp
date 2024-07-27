@@ -1,0 +1,48 @@
+body {
+	background: #141414;
+	color: #ffffff;
+}
+
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+
+/* .image-container {
+	position: relative;
+	transition: transform 0.2s;
+  /* display: block; }*/
+ 
+.image-container {
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 0 0 auto; /* Prevents items from stretching */
+  width: 150px; /* Adjusted width for smaller screens */
+  height: 225px; /* Adjusted height for smaller screens */
+  scroll-snap-align: start; /* Align items to start of scroll area */
+}
+
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+}
